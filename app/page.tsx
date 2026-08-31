@@ -110,7 +110,7 @@ function SplashScreen({ onStart }: { onStart: () => void }) {
   useEffect(() => {
     const isMob = window.innerWidth < 768;
     setDeviceConfig({ 
-      originX: isMob ? 69 : 69, 
+      originX: isMob ? 63 : 63, 
       originY: 49, 
       maskSize: isMob ? 220 : 350, 
       isMobile: isMob 
