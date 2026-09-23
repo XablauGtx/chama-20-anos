@@ -212,7 +212,7 @@ function VideoScreen({ onEnded }: { onEnded: () => void }) {
     <motion.div className="absolute inset-0 z-[60] bg-black flex flex-col items-center justify-center overflow-hidden" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
       
       <div className="absolute inset-0 -z-20">
-        <Image src="/chama.png" alt="Fundo Blur" fill priority className="object-cover opacity-20 blur-xl scale-110" />
+        <Image src="/chama1.png" alt="Fundo Blur" fill priority className="object-cover opacity-20 blur-xl scale-110" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-black/90" />
       </div>
 
@@ -227,8 +227,8 @@ function VideoScreen({ onEnded }: { onEnded: () => void }) {
       </motion.div>
 
       <div className="relative w-full max-w-5xl aspect-video z-10 flex items-center justify-center shadow-2xl">
-        {/* muted adicionado para garantir autoplay no iOS/Android Safari. onError fallback garantido. */}
-        <video src="/intro.mp4" autoPlay muted playsInline onEnded={onEnded} onError={onEnded} className="w-full h-full object-contain md:object-cover" />
+        {/* Atributo muted foi removido para que o som seja reproduzido */}
+        <video src="/intro.mp4" autoPlay playsInline onEnded={onEnded} onError={onEnded} className="w-full h-full object-contain md:object-cover" />
       </div>
 
       <button onClick={onEnded} className="absolute bottom-10 right-6 md:right-10 flex items-center gap-2 text-white/70 hover:text-white bg-black/60 backdrop-blur-md px-6 py-3 rounded-full text-xs tracking-widest border border-white/10 z-50 transition-all">
@@ -243,7 +243,7 @@ function MainCountdown({ days, hours, minutes, seconds }: any) {
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2 }} className="relative z-10 w-full min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
       
       <div className="absolute inset-0 -z-30">
-        <Image src="/chama.png" alt="Fundo Coral" fill priority className="object-cover opacity-40 scale-105" />
+        <Image src="/chama1.png" alt="Fundo Coral" fill priority className="object-cover opacity-40 scale-105" />
         <div className="absolute inset-0 bg-gradient-to-b from-black via-black/40 to-black" />
       </div>
 
